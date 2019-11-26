@@ -1,6 +1,6 @@
 ---
 title             : "EDLD 610_final"
-shorttitle        : "Title"
+shorttitle        : "Happiness"
 
 author: 
   - name          : "Asha"
@@ -29,21 +29,7 @@ authornote: |
   Enter author note here.
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
-  
-  <!-- https://tinyurl.com/ybremelq -->
+  abstract goes here
   
 keywords          : "keywords"
 wordcount         : "X"
@@ -99,13 +85,11 @@ data <- data %>%
 ```
 
 
-```{r cleaning the data step 1: collapsing v10 levels}
+```{r cleaning the data: recoding levels}
 
-# I used this to view the levels of v10. v10 is a character, not a factor, so need to use unique rather than levels function. I used this to get the exact spelling of the levels in order to collapse them. 
+unique(data$feeling_of_happiness)
 
-unique(data$v10)
-
-data %>%
+data_1 <- data %>%
   mutate(feeling_of_happiness = fct_recode(feeling_of_happiness,
                           "Very happy" = "Very happy",
                           "Rather happy" = "Rather happy",
@@ -181,26 +165,55 @@ data %>%
 ```
 
 
-```{r cleaning feeling_of_happiness variable}
+```{r filtering out observations with "other"}
 
-# NOTE: higher value = more happy, lower value = less happy
+data_2 <- data_1 %>%
+  filter(feeling_of_happiness != "Other", 
+         state_of_health != "Other",
+         most_people_trusted != "Other",
+         marital_status != "Other",
+         member_religion != "Other",
+         religious_person != "Other",
+         family_savings != "Other", 
+         gender != "Other")
 
-data %>%
+```
+
+
+```{r summary statistics, some examples of happiness by group}
+
+data_2 %>%
+  as_tibble() %>%
+  group_by(marital_status) %>%
+  count(feeling_of_happiness)
+
+data_2 %>%
+  as_tibble() %>%
+  group_by(family_savings) %>%
+  count(feeling_of_happiness)
+
+# Why does this still include "Don't know" and "HT: Dropped..." even though we recoded these as "Other" and then in the data_2 oject we filtered "Other" out??
+
+```
+
+
+```{r happiness variable recoded as numbers}
+
+str(data_1)
+
+data_3 <- data_2 %>%
   mutate(feeling_of_happiness = fct_recode(feeling_of_happiness,
                           "4" = "Very happy",
                           "3" = "Rather happy",
                           "2" = "Not very happy",
-                          "1" = "Not at all happy",
-                          "0" = "Other")) %>%
-    filter(feeling_of_happiness == "4" |
-           feeling_of_happiness == "3" |
-           feeling_of_happiness == "2" |
-           feeling_of_happiness == "1")
+                          "1" = "Not at all happy"))
 
-# Next step here: we need to figure out how to convert the happiness variable to an integer. Relabling didn't do this, it's still a factor. QUESTION: How do we convert this into an integer? When I try using as.numeric, it keeps coming up with an error message that the object feeling_of_happiness is not found and I don't understand why.  
+# Still need to figure out how to make happiness numeric in order to calculate mean happiness. 
+
 
 ```
 
+```
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
@@ -233,3 +246,28 @@ r_refs(file = "r-references.bib")
 
 <div id = "refs"></div>
 \endgroup
+
+# Final Paper
+
+## The final project must:
+
+(a) be a reproducible and dynamic APA manuscript produced with R Markdown, via
+the {papaja} package and include references to the extant literature; 
+(b) be housed on GitHub, with contributions from all authors obvious;
+(c) demonstrate moving data from its raw “messy” format to a tidy data format
+through the R Markdown file, but not in the final document;
+(d) include at least two exploratory data visualizations, and
+(e) include at least summary statistics of the data in tables, although fitted
+models of any sort are an added bonus (not literally, there are not extra points
+for fitting a model).
+
+## The points for the final project are broken down as follows: 
+### Writing (abstract, intro, methods, results, discussion, references)
+
+* 30 points(25%) Document is fully reproducible and housed on GitHub 
+* 25 points (21%) Demonstrate use of inline code 
+* 5 points (4%) Demonstrate tidying messy data 
+* 30 points (25%) Two data visualizations 
+* 20 points(10 points each) (17%) Production of at least one table (of summary
+  statistics or model results)
+* 10 points (8%)
