@@ -76,7 +76,7 @@ library(dplyr)
 ```{r loading the data}
 
 data <- import(here("data","F00007762-WV6_Data_R_v20180912.rds")) %>%
-  janitor::clean_names() %>%
+  clean_names() %>% #i deleted the "janitor::" section since i believe you don't need it, but glad to see others using janitor! -ellen
   select("v10", "v11", "v24", "v25", "v57", "v147", "v237", "v240") %>% 
   characterize()
 
@@ -94,7 +94,7 @@ data <- data %>%
       marital_status = v57,
       religious_person = v147,
       family_savings = v237,
-      gender = v240)
+      gender = v240) #great job here! -ellen
 
 ```
 
@@ -113,32 +113,36 @@ data %>%
                           "Not at all happy" = "Not at all happy",
                           "Other" = "No answer",
                           "Other" = "Dont know", 
-                          "Other" = "HT: Missing-Dropped out survey; RU: Inappropriate response{Inappropriate}"),
+                          "Other" = "HT: Missing-Dropped out survey; RU: Inappropriate 
+                                    response{Inappropriate}"),
          state_of_health = fct_recode(state_of_health,
-         "Very good" = "Very good",
+                          "Very good" = "Very good",
                           "Good" = "Good",
                           "Faid" = "Fair",
                           "Poor" = "Poor",
                           "Other" = "No answer",
                           "Other" = "Dont know", 
-                          "Other" = "BH:Missing;HT:Missing-Dropped out survey; RU:Inappropriate response{Inappropriate}"),
+                          "Other" = "BH:Missing;HT:Missing-Dropped out survey; RU:Inappropriate 
+                                    response{Inappropriate}"),
          most_people_trusted = fct_recode(most_people_trusted, 
                            "Most people can be trusted" = "Most people can be trusted",
                           "Need to be very careful" = "Need to be very careful",
-                          "Other" = " DE,SE: Inapplicable;RU: Inappropiate response;SG:Missing;HT: Dropped out survey",
+                          "Other" = " DE,SE: Inapplicable;RU: Inappropiate response;SG:Missing;HT: 
+                                      Dropped out survey",
                           "Other" = "Not asked in survey",
                           "Other" = "Not applicable",
                           "Other" = "No answer",
                           "Other" = "Don´t know"),
          member_religion = fct_recode(member_religion, 
                           "Not a member" = "Not a member",
-                        "Inactive member" = "Inactive member",
-                        "Active member" = "Active member",
-                        "Other" = " HT: Dropped out survey;SE: Inapplicable;RU: Inappropriate response",
-                        "Other" = "Not asked in survey",
-                        "Other" = "Not applicable",
-                        "Other" = "No answer",
-                        "Other" = "Don't know"), 
+                          "Inactive member" = "Inactive member",
+                          "Active member" = "Active member",
+                          "Other" = " HT: Dropped out survey;SE: Inapplicable;RU: Inappropriate 
+                                      response",
+                          "Other" = "Not asked in survey",
+                          "Other" = "Not applicable",
+                          "Other" = "No answer",
+                          "Other" = "Don't know"), 
          marital_status = fct_recode(marital_status, 
                           "Married" = "Married",
                           "Living together as married" = "Living together as married",
@@ -158,15 +162,18 @@ data %>%
                            "Other" = "No answer",
                            "Other" = "Dont know",
                            "Other" = "Not asked in survey",
-                           "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; HT: Dropped out survey{Inappropriate}"),
+                           "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; HT: Dropped out 
+                                      survey{Inappropriate}"),
          family_savings = fct_recode(family_savings, 
                            "Save money" = "Save money", 
                             "Just get by" = "Just get by", 
                             "Spent savings and borrowed money" = "Spent savings and borrowed money",
-                            "Spent some savings and borrowed money" = "Spent some savings and borrowed money",
+                            "Spent some savings and borrowed money" = "Spent some savings and borrowed 
+                                                                        money",
                             "Other" = "No answer",
                             "Other" = "Dont know", 
-                            "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; BH: Missing; HT: Dropped out survey{Inappropriate}", 
+                            "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; BH: Missing; HT: 
+                                      Dropped out survey{Inappropriate}", 
                             "Other" = "Not applicable"),
          gender = fct_recode(gender,
                            "Male" = "Male", 
@@ -174,7 +181,7 @@ data %>%
                            "Other" = "No answer", 
                            "Other" = "Missing; Unknown")
          
-         )
+         ) #i can see that this chunk of code took a lot of effort--great job!
          
 
 
@@ -198,6 +205,8 @@ data %>%
            feeling_of_happiness == "1")
 
 # Next step here: we need to figure out how to convert the happiness variable to an integer. Relabling didn't do this, it's still a factor. QUESTION: How do we convert this into an integer? When I try using as.numeric, it keeps coming up with an error message that the object feeling_of_happiness is not found and I don't understand why.  
+
+#From Ellen Huang: you may be able to use the parse_number() function. it would be housed under mutate(). so for example: mutate(happy = parse_number(happy))
 
 ```
 
