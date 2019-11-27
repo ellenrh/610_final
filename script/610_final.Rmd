@@ -90,76 +90,89 @@ data <- data %>%
 unique(data$feeling_of_happiness)
 
 data_1 <- data %>%
-  mutate(feeling_of_happiness = fct_recode(feeling_of_happiness,
+    mutate(feeling_of_happiness = fct_recode(feeling_of_happiness,
                           "Very happy" = "Very happy",
                           "Rather happy" = "Rather happy",
                           "Not very happy" = "Not very happy",
                           "Not at all happy" = "Not at all happy",
                           "Other" = "No answer",
                           "Other" = "Dont know", 
-                          "Other" = "HT: Missing-Dropped out survey; RU: Inappropriate response{Inappropriate}"),
-         state_of_health = fct_recode(state_of_health,
-         "Very good" = "Very good",
+                          "Other" = "HT: Missing-Dropped out survey; RU: Inappropriate response{Inappropriate}"))
+
+data_1 <- data_1 %>%
+  mutate(state_of_health = fct_recode(state_of_health,
+                          "Very good" = "Very good",
                           "Good" = "Good",
-                          "Faid" = "Fair",
+                          "Fair" = "Fair",
                           "Poor" = "Poor",
                           "Other" = "No answer",
                           "Other" = "Dont know", 
-                          "Other" = "BH:Missing;HT:Missing-Dropped out survey; RU:Inappropriate response{Inappropriate}"),
-         most_people_trusted = fct_recode(most_people_trusted, 
-                           "Most people can be trusted" = "Most people can be trusted",
+                          "Other" = "BH:Missing;HT:Missing-Dropped out survey; RU:Inappropriate response{Inappropriate}")) 
+  
+data_1 <- data_1 %>%
+  mutate(most_people_trusted = fct_recode(most_people_trusted, 
+                          "Most people can be trusted" = "Most people can be trusted",
                           "Need to be very careful" = "Need to be very careful",
-                          "Other" = " DE,SE: Inapplicable;RU: Inappropiate response;SG:Missing;HT: Dropped out survey",
-                          "Other" = "Not asked in survey",
-                          "Other" = "Not applicable",
+                          "Other" = "DE,SE: Inapplicable;RU: Inappropiate response;SG:Missing;HT: Dropped out survey{Inappropriate}",
                           "Other" = "No answer",
-                          "Other" = "Don´t know"),
-         member_religion = fct_recode(member_religion, 
-                          "Not a member" = "Not a member",
+                          "Other" = "Dont know"))
+
+data_1 <- data_1 %>%
+  mutate(member_religion = fct_recode(member_religion, 
+                        "Not a member" = "Not a member",
                         "Inactive member" = "Inactive member",
                         "Active member" = "Active member",
-                        "Other" = " HT: Dropped out survey;SE: Inapplicable;RU: Inappropriate response",
-                        "Other" = "Not asked in survey",
-                        "Other" = "Not applicable",
+                        "Other" =  "HT: Dropped out survey;SE: Inapplicable;RU: Inappropriate response{Inappropriate}",
                         "Other" = "No answer",
-                        "Other" = "Don't know"), 
-         marital_status = fct_recode(marital_status, 
+                        "Other" = "Dont know"))
+
+data_1 <- data_1 %>%
+  mutate(marital_status = fct_recode(marital_status, 
                           "Married" = "Married",
                           "Living together as married" = "Living together as married",
                           "Divorced" = "Divorced",
                           "Separated" = "Separated",
                           "Widowed" = "Widowed",
                           "Single" = "Single",
-                          "Other" = "HT: Dropped out survey;SG: Missing; RU: Inappropriate response",
-                          "Other" = "Not asked in survey",
-                          "Other" = "Not applicable",
+                          "Other" = "HT: Dropped out survey;SG: Missing; RU: Inappropriate response{Inappropriate}",
                           "Other" = "No answer",
-                          "Other" = "Don´t know"),
-         religious_person = fct_recode(religious_person, 
+                          "Other" = "Dont know"))
+
+data_1 <- data_1 %>%
+  mutate(religious_person = fct_recode(religious_person, 
                            "A religious person" = "A religious person",
                            "Not a religious person" = "Not a religious person",
                            "Not a religious person" = "An atheist",
                            "Other" = "No answer",
                            "Other" = "Dont know",
                            "Other" = "Not asked in survey",
-                           "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; HT: Dropped out survey{Inappropriate}"),
-         family_savings = fct_recode(family_savings, 
+                           "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; HT: Dropped out survey{Inappropriate}"))
+
+data_1 <- data_1 %>%
+mutate(family_savings = fct_recode(family_savings, 
                            "Save money" = "Save money", 
-                            "Just get by" = "Just get by", 
-                            "Spent savings and borrowed money" = "Spent savings and borrowed money",
-                            "Spent some savings and borrowed money" = "Spent some savings and borrowed money",
-                            "Other" = "No answer",
-                            "Other" = "Dont know", 
-                            "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; BH: Missing; HT: Dropped out survey{Inappropriate}", 
-                            "Other" = "Not applicable"),
-         gender = fct_recode(gender,
+                           "Just get by" = "Just get by", 
+                           "Spent savings and borrowed money" = "Spent savings and borrowed money",
+                           "Spent some savings and borrowed money" = "Spent some savings and borrowed money",
+                           "Other" = "No answer",
+                           "Other" = "Dont know", 
+                           "Other" = "DE,SE:Inapplicable ; RU:Inappropriate response; BH: Missing; HT: Dropped out survey{Inappropriate}", 
+                           "Other" = "Not applicable"))
+
+data_1 <- data_1 %>%
+  mutate(gender = fct_recode(gender,
                            "Male" = "Male", 
                            "Female" = "Female", 
                            "Other" = "No answer", 
-                           "Other" = "Missing; Unknown")
-         
-         )
-         
+                           "Other" = "Missing; Unknown"))
+
+# unique(data_1$gender)
+# unique(data_1$feeling_of_happiness)
+# unique(data_1$marital_status)
+# unique(data_1$state_of_health)
+
+# running both of these shows that this recoding worked for the "feeling of happiness" variable but not for marital status (or any of the others). Where is the error?
+# I realized that if I did them each separately, overwriting data_1 each time, it worked! I also realized that we needed to use unique() to check the exact labels for each variable. They differed a little, so copying and pasting led to some errors. I cleaned these up, it all works now! data_1 has all of the variable levels recoded to "Other" as appropriate.
 
 
 ```
@@ -167,51 +180,39 @@ data_1 <- data %>%
 
 ```{r filtering out observations with "other"}
 
-data_2 <- data_1 %>%
-  filter(feeling_of_happiness != "Other", 
-         state_of_health != "Other",
-         most_people_trusted != "Other",
-         marital_status != "Other",
-         member_religion != "Other",
-         religious_person != "Other",
-         family_savings != "Other", 
-         gender != "Other")
+clean_data <- data_1 %>%
+  filter(feeling_of_happiness != "Other" &
+           state_of_health != "Other" &
+           most_people_trusted != "Other" &
+           marital_status != "Other" &
+           member_religion != "Other" &
+           religious_person != "Other" &
+           family_savings != "Other" &
+           gender != "Other")
+
+rm(data_cleaned)
+
+# unique(data_2$feeling_of_happiness)
+# unique(data_2$marital_status)
+# unique(data_2$most_people_trusted)
 
 ```
 
 
 ```{r summary statistics, some examples of happiness by group}
 
-data_2 %>%
+clean_data %>%
   as_tibble() %>%
   group_by(marital_status) %>%
   count(feeling_of_happiness)
 
-data_2 %>%
+clean_data %>%
   as_tibble() %>%
   group_by(family_savings) %>%
   count(feeling_of_happiness)
 
-# Why does this still include "Don't know" and "HT: Dropped..." even though we recoded these as "Other" and then in the data_2 oject we filtered "Other" out??
-
 ```
 
-
-```{r happiness variable recoded as numbers}
-
-str(data_1)
-
-data_3 <- data_2 %>%
-  mutate(feeling_of_happiness = fct_recode(feeling_of_happiness,
-                          "4" = "Very happy",
-                          "3" = "Rather happy",
-                          "2" = "Not very happy",
-                          "1" = "Not at all happy"))
-
-# Still need to figure out how to make happiness numeric in order to calculate mean happiness. 
-
-
-```
 
 ```
 
