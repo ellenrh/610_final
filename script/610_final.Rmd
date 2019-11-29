@@ -56,6 +56,7 @@ library(rio)
 library(here)
 library(janitor)
 library(dplyr)
+library(kableExtra)
 
 ```
 
@@ -171,10 +172,6 @@ data_1 <- data_1 %>%
 # unique(data_1$marital_status)
 # unique(data_1$state_of_health)
 
-# running both of these shows that this recoding worked for the "feeling of happiness" variable but not for marital status (or any of the others). Where is the error?
-# I realized that if I did them each separately, overwriting data_1 each time, it worked! I also realized that we needed to use unique() to check the exact labels for each variable. They differed a little, so copying and pasting led to some errors. I cleaned these up, it all works now! data_1 has all of the variable levels recoded to "Other" as appropriate.
-
-
 ```
 
 
@@ -189,8 +186,6 @@ clean_data <- data_1 %>%
            religious_person != "Other" &
            family_savings != "Other" &
            gender != "Other")
-
-rm(data_cleaned)
 
 # unique(data_2$feeling_of_happiness)
 # unique(data_2$marital_status)
@@ -213,6 +208,49 @@ clean_data %>%
 
 ```
 
+
+```{r happiness and family savings JW}
+
+# further tidying the data to use a subset: 
+
+subset_JW <- clean_data %>%
+  select(family_savings, feeling_of_happiness)
+
+happiness_by_family_savings <- clean_data %>%
+  group_by(family_savings) %>%
+  count(feeling_of_happiness)
+
+# making a table: 
+
+kable(happiness_by_family_savings)
+
+# exploring the data with visualizations:
+
+happiness_by_family_savings %>%
+  ggplot(aes(feeling_of_happiness, n)) +
+  geom_col(fill = "dark blue") +
+  facet_wrap(~family_savings) +
+  labs(title = "Figure 1", 
+       subtitle = "Happiness levels by family savings",
+       x = "Level of happiness",
+       y = "Number of people") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+happiness_by_family_savings %>%
+  group_by(family_savings) %>%
+  mutate(percent = n/76222) %>%
+ggplot(aes(feeling_of_happiness, percent)) +
+  geom_col(fill = "dark blue") +
+  facet_wrap(~family_savings) +
+  labs(title = "Figure 2", 
+       subtitle = "Happiness levels by family savings",
+       x = "Level of happiness",
+       y = "Percentage of total") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
 
 ```
 
@@ -248,9 +286,9 @@ r_refs(file = "r-references.bib")
 <div id = "refs"></div>
 \endgroup
 
-# Final Paper
+Final Paper
 
-## The final project must:
+The final project must:
 
 (a) be a reproducible and dynamic APA manuscript produced with R Markdown, via
 the {papaja} package and include references to the extant literature; 
