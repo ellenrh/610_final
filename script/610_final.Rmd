@@ -194,21 +194,6 @@ clean_data <- data_1 %>%
 ```
 
 
-```{r summary statistics, some examples of happiness by group}
-
-clean_data %>%
-  as_tibble() %>%
-  group_by(marital_status) %>%
-  count(feeling_of_happiness)
-
-clean_data %>%
-  as_tibble() %>%
-  group_by(family_savings) %>%
-  count(feeling_of_happiness)
-
-```
-
-
 ```{r happiness and family savings JW}
 
 # further tidying the data to use a subset: 
@@ -251,6 +236,32 @@ ggplot(aes(feeling_of_happiness, percent)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 ```
+
+```{r happiness by religion}
+
+# NOTE TO SELF: some examples, need to iron out wrinkles in these. Not sure how to make pivot_longer and pivot_wider work here. See error message.
+
+subset_JW_2 <- clean_data %>%
+  select(feeling_of_happiness, religious_person, member_religion)
+
+subset_JW_2 %>%
+pivot_longer(
+    cols = c(member_religion, religious_person),
+    names_to = "Religious status",
+    values_to = "Level of observance"
+  )
+
+subset_JW_2 %>%
+  pivot_wider(
+    names_from = "religious_person",
+    values_from = "feeling_of_happiness"
+  )
+
+?pivot_wider
+
+```
+
+
 
 ```
 
