@@ -263,7 +263,6 @@ subset_JW_2 %>%
 
 
 
-```
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
@@ -321,3 +320,5 @@ for fitting a model).
 * 20 points(10 points each) (17%) Production of at least one table (of summary
   statistics or model results)
 * 10 points (8%)
+
+
