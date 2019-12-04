@@ -216,51 +216,75 @@ happiness_by_family_savings %>%
   geom_col(fill = "dark blue") +
   facet_wrap(~family_savings) +
   labs(title = "Figure 1", 
-       subtitle = "Happiness levels by family savings",
+       subtitle = "Happiness levels by family savings: Raw numbers",
        x = "Level of happiness",
        y = "Number of people") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
+# to chart by percentages: 
+
+happiness_by_family_savings <- happiness_by_family_savings %>%
+  mutate(total = sum(n)) %>%
+  mutate(percent = n/total)
+
 happiness_by_family_savings %>%
   group_by(family_savings) %>%
-  mutate(percent = n/76222) %>%
 ggplot(aes(feeling_of_happiness, percent)) +
   geom_col(fill = "dark blue") +
   facet_wrap(~family_savings) +
   labs(title = "Figure 2", 
-       subtitle = "Happiness levels by family savings",
+       subtitle = "Happiness levels by family savings: percentage",
        x = "Level of happiness",
        y = "Percentage of total") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
+
+# it would be interesting to look at these percentages in order  to compare happiness levels amongst groups:     
+
+happiness_by_family_savings %>%
+  as_tibble() %>%
+  arrange(percent)
+
+# or, another way to visualize this would be: 
+
+happiness_by_family_savings %>%
+  ggplot(aes(feeling_of_happiness, percent, colour = family_savings)) +
+  geom_point() +
+  geom_smooth(se = FALSE, method = lm) +
+  labs(Title = "Figure 3",
+       subtitle = "Amother way of looking at happiness by family savings: percentage")
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+?geom_smooth
+
 ```
 
-```{r happiness by religion}
+As Figure 3 shows, although patterns of happiness levels are similar overall (e.g. most people report being "Rather Happy", fewest people report being "Not happy at all"), there are some differences of happiness level distributions between groups. A greater percentage of those with the lowest level of family savings (those who spent savings and borrowed money) reported being "Not at all happy" or "Not very happy". On the other hand, the greatest percentage of people reporting being "Rather happy" were those who reported just getting by, and the greatest percentage of people reporting the highest level of happiness were those in the strongest financial position - those who saved money.
 
-# NOTE TO SELF: some examples, need to iron out wrinkles in these. Not sure how to make pivot_longer and pivot_wider work here. See error message.
+(NOTE: I'd like to use inline code here to reference exact percentages. How do put one cell value into inline code??)
 
-subset_JW_2 <- clean_data %>%
-  select(feeling_of_happiness, religious_person, member_religion)
 
-subset_JW_2 %>%
-pivot_longer(
-    cols = c(member_religion, religious_person),
-    names_to = "Religious status",
-    values_to = "Level of observance"
-  )
 
-subset_JW_2 %>%
+```{r trying out pivot_wider and pivot_longer}
+
+happiness_by_family_savings_1 <- happiness_by_family_savings%>%
   pivot_wider(
-    names_from = "religious_person",
-    values_from = "feeling_of_happiness"
+    names_from = family_savings,
+    values_from = percent)
+
+happiness_by_family_savings_2 <- happiness_by_family_savings_1 %>%
+  pivot_longer(
+    cols = c("Save money", "Just get by", "Spent some savings and borrowed money", "Spent savings and borrowed money"), 
+    names_to = "family_savings",
+    values_to = "percent"
   )
 
-?pivot_wider
+?pivot_longer
 
 ```
-
 
 
 
