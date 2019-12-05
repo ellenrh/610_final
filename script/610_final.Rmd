@@ -3,7 +3,7 @@ title             : "What explains happiness? The relationships between happines
 shorttitle        : "What explains happiness?"
 
 author: 
-  - name          : "Asha"
+  - name          : "Asha Yadav"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
     address       : "Postal address"
