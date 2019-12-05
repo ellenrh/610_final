@@ -1,4 +1,4 @@
-\documentclass[man]{apa6}
+\documentclass[man,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -94,12 +94,6 @@ Thuy\textsuperscript{1}}
 \newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
 \usepackage{lineno}
 
 \linenumbers
@@ -128,15 +122,6 @@ abstract goes here
 ## [5] "No answer"                                                                
 ## [6] "Dont know"                                                                
 ## [7] "HT: Missing-Dropped out survey; RU: Inappropriate response{Inappropriate}"
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: Unknown levels in `f`: HT: Missing-Dropped out survey; RU:
-## Inappropriate response{Inappropriate}
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: Unknown levels in `f`: No answer, Dont know
 \end{verbatim}
 
 \begin{tabular}{l|l|r}
@@ -594,7 +579,6 @@ financial position - those who saved money.
 How do put one cell value into inline code??)
 
 \includegraphics{610_final_files/figure-latex/trust and health-1.pdf}
-\includegraphics{610_final_files/figure-latex/trust and health-2.pdf}
 
 \begin{tabular}{l|l|r}
 \hline
@@ -618,11 +602,21 @@ Need to be very careful & Very happy & 19512\\
 \hline
 \end{tabular}
 
+\begin{figure}
+\centering
+\includegraphics{610_final_files/figure-latex/trust and health-2.pdf}
+\caption{}
+\end{figure}
+
 \subsection{Happiness and trust}\label{happiness-and-trust}
 
-Out of totla 76222 people, only slightly more than 24.47 percent say
+Out of the total 76222 people, only slightly more than 24.47 percent say
 they can trust most of the people around them, while 75.53 is caucious
 about the society.
+
+See below
+\includegraphics{610_final_files/figure-latex/unnamed-chunk-1-1.pdf} it
+shows us
 
 \section{Introduction}\label{introduction}
 

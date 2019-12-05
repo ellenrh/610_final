@@ -34,7 +34,7 @@ wordcount         : "X"
 
 bibliography      : [r-references.bib]
 
-floatsintext      : no
+floatsintext      : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -48,6 +48,9 @@ output            : papaja::apa6_pdf
 ---
 
 ```{r setup, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE,
+                      echo = FALSE
+                      )
 library("papaja")
 library(tidyverse)
 library(rio)
@@ -56,6 +59,10 @@ library(janitor)
 library(dplyr)
 library(kableExtra)
 library(knitr)
+
+```
+
+```{r APA table, results= 'asis'}
 
 ```
 
@@ -252,8 +259,6 @@ happiness_by_family_savings %>%
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-?geom_smooth
-
 ```
 
 As Figure 3 shows, although patterns of happiness levels are similar overall (e.g. most people report being "Rather Happy", fewest people report being "Not happy at all"), there are some differences of happiness level distributions between groups. A greater percentage of those with the lowest level of family savings (those who spent savings and borrowed money) reported being "Not at all happy" or "Not very happy". On the other hand, the greatest percentage of people reporting being "Rather happy" were those who reported just getting by, and the greatest percentage of people reporting the highest level of happiness were those in the strongest financial position - those who saved money.
@@ -276,8 +281,6 @@ happiness_by_family_savings_2 <- happiness_by_family_savings_1 %>%
     values_to = "percent"
   )
 
-?pivot_longer
-
 ```
 
 
@@ -287,7 +290,11 @@ happiness_by_family_savings_2 <- happiness_by_family_savings_1 %>%
 happiness_health <- data %>% 
   select("feeling_of_happiness", "state_of_health") %>%  
   group_by(state_of_health) %>% 
-  mutate(feeling_of_happiness = fct_infreq(feeling_of_happiness)) %>% # try to reorder the columns but doesn't work
+  mutate(feeling_of_happiness = fct_relevel(feeling_of_happiness,
+                                            "Not at all happy",
+                                            "Not very happy",
+                                            "Rather happy"
+                                            )) %>% 
   count(feeling_of_happiness) 
 
 
@@ -307,7 +314,7 @@ happiness_trust <- data %>%
   group_by(most_people_trusted) %>% 
   count(feeling_of_happiness)
 
-happiness_trust %>% 
+fig1 <- happiness_trust %>% 
 ggplot(aes(feeling_of_happiness, n))+
   geom_col(color = "red", fill = "lightblue")+
   facet_wrap(~most_people_trusted) +
@@ -330,11 +337,15 @@ happiness_health_longer <-happiness_health_wider %>%
   pivot_longer(
     cols = -1,
     names_to = "level_happy", 
-    values_to = "number of people"
+    values_to = "number_of_people"
   )
 
 # How can we put the graphs/ tables at the positions we want in the report? Break the code chunk after each text section?
 # how to calculate proportion of each category in feeling of happiness? (say: how many % feell very happy?) Here I do that  manually. 
+happiness_health_longer %>% 
+ggplot(aes(state_of_health, number_of_people, fill = factor(level_happy)))+
+  geom_col(position = "fill", stat = "identity") # take out y values 
+# relevel them
 
 trust <- sum(255 + 1528 + 10369 + 6499) 
 caution <- sum(1368 + 7619 + 29072 + 19512)
@@ -344,9 +355,6 @@ percent_caution <- (caution/total)*100
 ```
 
 
-## Happiness and trust
-
-Out of the total `r total` people, only slightly more than `r percent_trust` percent say they can trust most of the people around them, while `r percent_caution` is caucious about the society. 
 
 
 # Introduction
@@ -366,6 +374,16 @@ We report how we determined our sample size, all data exclusions (if any), all m
 
 
 ## Data analysis
+
+### Happiness and trust
+
+Out of the total `r total` people, only slightly more than `r percent_trust` percent say they can trust most of the people around them, while `r percent_caution` is caucious about the society. 
+
+See below
+```{r}
+fig1
+```
+it shows us
 We used `r cite_r("r-references.bib")` for all our analyses.
 
 
