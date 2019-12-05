@@ -1,0 +1,7 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{610_final_files/figure-latex/happiness and family savings JW-3.pdf}
+\caption{}
+\end{figure*}
