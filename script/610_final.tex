@@ -24,7 +24,7 @@
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdftitle={What explains happiness? The relationships between happiness and marrige, religion health, trust, and saving},
-            pdfauthor={Asha, Joanna, \& Thuy},
+            pdfauthor={Asha Yadav, Joanna, \& Thuy},
             pdfkeywords={happiness},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -63,10 +63,8 @@
 \def\footnote{\protect\rmarkdownfootnote}
 
 
-  \title{What explains happiness? The relationships between happiness and
-marrige, religion health, trust, and saving}
-    \author{Asha\textsuperscript{1}, Joanna\textsuperscript{1}, \&
-Thuy\textsuperscript{1}}
+  \title{What explains happiness? The relationships between happiness and marrige, religion health, trust, and saving}
+    \author{Asha Yadav\textsuperscript{1}, Joanna\textsuperscript{1}, \& Thuy\textsuperscript{1}}
     \date{}
   
 \shorttitle{What explains happiness?}
@@ -98,12 +96,9 @@ Thuy\textsuperscript{1}}
 
 \linenumbers
 
-\authornote{We thank Dr.~Nese for his guidance in this
-project. All mistakes remain ours.
+\authornote{We thank Dr.~Nese for his guidance in this project. All mistakes remain ours.
 
-Correspondence concerning this article should be addressed to Asha,
-Postal address. E-mail:
-\href{mailto:my@email.com}{\nolinkurl{my@email.com}}}
+Correspondence concerning this article should be addressed to Asha Yadav, Postal address. E-mail: \href{mailto:my@email.com}{\nolinkurl{my@email.com}}}
 
 \abstract{
 abstract goes here
@@ -162,8 +157,7 @@ Spent some savings and borrowed money & Very happy & 3800\\
 \hline
 \end{tabular}
 
-\includegraphics{610_final_files/figure-latex/happiness and family savings JW-1.pdf}
-\includegraphics{610_final_files/figure-latex/happiness and family savings JW-2.pdf}
+\includegraphics{610_final_files/figure-latex/happiness and family savings JW-1.pdf} \includegraphics{610_final_files/figure-latex/happiness and family savings JW-2.pdf}
 
 \begin{verbatim}
 ## # A tibble: 16 x 5
@@ -187,11 +181,7 @@ Spent some savings and borrowed money & Very happy & 3800\\
 ## 16 Just get by                      Rather happy        18661 34669 0.538
 \end{verbatim}
 
-\begin{figure}
-\centering
 \includegraphics{610_final_files/figure-latex/happiness and family savings JW-3.pdf}
-\caption{}
-\end{figure}
 
 \begin{verbatim}
 ## List of 65
@@ -563,20 +553,9 @@ Spent some savings and borrowed money & Very happy & 3800\\
 ##  - attr(*, "validate")= logi TRUE
 \end{verbatim}
 
-As Figure 3 shows, although patterns of happiness levels are similar
-overall (e.g.~most people report being \enquote{Rather Happy}, fewest
-people report being \enquote{Not happy at all}), there are some
-differences of happiness level distributions between groups. A greater
-percentage of those with the lowest level of family savings (those who
-spent savings and borrowed money) reported being \enquote{Not at all
-happy} or \enquote{Not very happy}. On the other hand, the greatest
-percentage of people reporting being \enquote{Rather happy} were those
-who reported just getting by, and the greatest percentage of people
-reporting the highest level of happiness were those in the strongest
-financial position - those who saved money.
+As Figure 3 shows, although patterns of happiness levels are similar overall (e.g.~most people report being \enquote{Rather Happy}, fewest people report being \enquote{Not happy at all}), there are some differences of happiness level distributions between groups. A greater percentage of those with the lowest level of family savings (those who spent savings and borrowed money) reported being \enquote{Not at all happy} or \enquote{Not very happy}. On the other hand, the greatest percentage of people reporting being \enquote{Rather happy} were those who reported just getting by, and the greatest percentage of people reporting the highest level of happiness were those in the strongest financial position - those who saved money.
 
-(NOTE: I'd like to use inline code here to reference exact percentages.
-How do put one cell value into inline code??)
+(NOTE: I'd like to use inline code here to reference exact percentages. How do put one cell value into inline code??)
 
 \includegraphics{610_final_files/figure-latex/trust and health-1.pdf}
 
@@ -602,161 +581,114 @@ Need to be very careful & Very happy & 19512\\
 \hline
 \end{tabular}
 
-\begin{figure}
-\centering
 \includegraphics{610_final_files/figure-latex/trust and health-2.pdf}
-\caption{}
-\end{figure}
 
-\subsection{Happiness and trust}\label{happiness-and-trust}
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
 
-Out of the total 76222 people, only slightly more than 24.47 percent say
-they can trust most of the people around them, while 75.53 is caucious
-about the society.
+Study of happiness and its causal factors has been flourished in recent years. This project explores the relationship between happiness and some candidate variables, namely marital status, religious affiliation, level of income, status of heath, and level of trust. We use individual level survey of more than 85,000 respondents across 60 countries and societies around the world in World Value Survey Dataset 2012.
+
+Scholars have studied the relationship between happines and political system (Inglehart, 2009)\ldots{}
+
+Johnson (2012) finds that \enquote{trust as measured by the World Values Survey is positively correlated with experimentally measured trust}.
+
+Gandelman and Hernández-Murillo (2013) reviews relationship of self-rate health status and perceived life quality.
+
+Asha trying citation (Stack \& Eshleman, 1998)
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study.
+
+\hypertarget{data-analysis}{%
+\subsection{Data analysis}\label{data-analysis}}
+
+\hypertarget{happiness-and-trust}{%
+\subsubsection{Happiness and trust}\label{happiness-and-trust}}
+
+Out of the total 76222 people, only slightly more than 24.47 percent say they can trust most of the people around them, while 75.53 is caucious about the society.
 
 See below
-\includegraphics{610_final_files/figure-latex/unnamed-chunk-1-1.pdf} it
-shows us
+\includegraphics{610_final_files/figure-latex/unnamed-chunk-1-1.pdf}
+it shows us
+We used R (Version 3.6.1; R Core Team, 2018) and the R-packages \emph{dplyr} (Version 0.8.3; Wickham et al., 2019), \emph{forcats} (Version 0.4.0; Wickham, 2019a), \emph{ggplot2} (Version 3.2.1; Wickham, 2016), \emph{here} (Version 0.1; Müller, 2017), \emph{janitor} (Version 1.2.0; Firke, 2019), \emph{kableExtra} (Version 1.1.0; Zhu, 2019), \emph{knitr} (Version 1.25; Xie, 2015), \emph{papaja} (Version 0.1.0.9842; Aust \& Barth, 2018), \emph{purrr} (Version 0.3.3; Henry \& Wickham, 2019), \emph{readr} (Version 1.3.1; Wickham, Hester, \& Francois, 2018), \emph{rio} (Version 0.5.16; Chan, Chan, Leeper, \& Becker, 2018), \emph{stringr} (Version 1.4.0; Wickham, 2019b), \emph{tibble} (Version 2.1.3; Müller \& Wickham, 2019), \emph{tidyr} (Version 1.0.0; Wickham \& Henry, 2019), and \emph{tidyverse} (Version 1.2.1; Wickham, 2017) for all our analyses.
 
-\section{Introduction}\label{introduction}
+\hypertarget{results}{%
+\section{Results}\label{results}}
 
-Study of happiness and its causal factors has been flourished in recent
-years. This project explores the relationship between happiness and some
-candidate variables, namely marital status, religious affiliation, level
-of income, status of heath, and level of trust. We use individual level
-survey of more than 85,000 respondents across 60 countries and societies
-around the world in World Value Survey Dataset 2012.
-
-Scholars have studied the relationship between happines and political
-system (Inglehart, 2009)\ldots{}
-
-Johnson (2012) finds that \enquote{trust as measured by the World Values
-Survey is positively correlated with experimentally measured trust}.
-
-Gandelman and Hernández-Murillo (2013) reviews relationship of self-rate
-health status and perceived life quality.
-
-\section{Methods}\label{methods}
-
-We report how we determined our sample size, all data exclusions (if
-any), all manipulations, and all measures in the study.
-
-\subsection{Data analysis}\label{data-analysis}
-
-We used R (Version 3.5.1; R Core Team, 2018) and the R-packages
-\emph{dplyr} (Version 0.8.3; Wickham, François, Henry, \& Müller, 2019),
-\emph{forcats} (Version 0.4.0; Wickham, 2019a), \emph{ggplot2} (Version
-3.2.1; Wickham, 2016), \emph{here} (Version 0.1; Müller, 2017),
-\emph{janitor} (Version 1.2.0; Firke, 2019), \emph{kableExtra} (Version
-1.1.0; Zhu, 2019), \emph{knitr} (Version 1.25; Xie, 2015), \emph{papaja}
-(Version 0.1.0.9842; Aust \& Barth, 2018), \emph{purrr} (Version 0.3.3;
-Henry \& Wickham, 2019), \emph{readr} (Version 1.3.1; Wickham, Hester,
-\& Francois, 2018), \emph{rio} (Version 0.5.16; C.-h. Chan, Chan,
-Leeper, \& Becker, 2018), \emph{stringr} (Version 1.4.0; Wickham,
-2019b), \emph{tibble} (Version 2.1.3; Müller \& Wickham, 2019),
-\emph{tidyr} (Version 1.0.0; Wickham \& Henry, 2019), and
-\emph{tidyverse} (Version 1.2.1; Wickham, 2017) for all our analyses.
-
-\section{Results}\label{results}
-
-\section{Discussion}\label{discussion}
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
 
 \newpage
 
-\section{References}\label{references}
+\hypertarget{references}{%
+\section{References}\label{references}}
 
 \begingroup
-\setlength{\parindent}{-0.5in} \setlength{\leftskip}{0.5in}
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
 
 \hypertarget{refs}{}
-\hypertarget{ref-R-papaja}{}
-Aust, F., \& Barth, M. (2018). \emph{papaja: Create APA manuscripts with
-R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
+\leavevmode\hypertarget{ref-R-papaja}{}%
+Aust, F., \& Barth, M. (2018). \emph{papaja: Create APA manuscripts with R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
 
-\hypertarget{ref-R-rio}{}
-Chan, C.-h., Chan, G. C., Leeper, T. J., \& Becker, J. (2018).
-\emph{Rio: A swiss-army knife for data file i/o}.
+\leavevmode\hypertarget{ref-R-rio}{}%
+Chan, C.-h., Chan, G. C., Leeper, T. J., \& Becker, J. (2018). \emph{Rio: A swiss-army knife for data file i/o}.
 
-\hypertarget{ref-R-janitor}{}
-Firke, S. (2019). \emph{Janitor: Simple tools for examining and cleaning
-dirty data}. Retrieved from
-\url{https://CRAN.R-project.org/package=janitor}
+\leavevmode\hypertarget{ref-R-janitor}{}%
+Firke, S. (2019). \emph{Janitor: Simple tools for examining and cleaning dirty data}. Retrieved from \url{https://CRAN.R-project.org/package=janitor}
 
-\hypertarget{ref-gandelman2013happiness}{}
-Gandelman, N., \& Hernández-Murillo, R. (2013). What do happiness and
-health satisfaction data tell us about relative risk aversion?
-\emph{Journal of Economic Psychology}, \emph{39}, 301--312.
+\leavevmode\hypertarget{ref-gandelman2013happiness}{}%
+Gandelman, N., \& Hernández-Murillo, R. (2013). What do happiness and health satisfaction data tell us about relative risk aversion? \emph{Journal of Economic Psychology}, \emph{39}, 301--312.
 
-\hypertarget{ref-R-purrr}{}
-Henry, L., \& Wickham, H. (2019). \emph{Purrr: Functional programming
-tools}. Retrieved from \url{https://CRAN.R-project.org/package=purrr}
+\leavevmode\hypertarget{ref-R-purrr}{}%
+Henry, L., \& Wickham, H. (2019). \emph{Purrr: Functional programming tools}. Retrieved from \url{https://CRAN.R-project.org/package=purrr}
 
-\hypertarget{ref-inglehart200911}{}
-Inglehart, R. (2009). 11. democracy and happiness: What causes what?
-\emph{Happiness, Economics and Politics: Towards a Multi-Disciplinary
-Approach}, 256.
+\leavevmode\hypertarget{ref-inglehart200911}{}%
+Inglehart, R. (2009). 11. Democracy and happiness: What causes what? \emph{Happiness, Economics and Politics: Towards a Multi-Disciplinary Approach}, 256.
 
-\hypertarget{ref-johnson2012much}{}
-Johnson, N. D., \& Mislin, A. (2012). How much should we trust the world
-values survey trust question? \emph{Economics Letters}, \emph{116}(2),
-210--212.
+\leavevmode\hypertarget{ref-johnson2012much}{}%
+Johnson, N. D., \& Mislin, A. (2012). How much should we trust the world values survey trust question? \emph{Economics Letters}, \emph{116}(2), 210--212.
 
-\hypertarget{ref-R-here}{}
-Müller, K. (2017). \emph{Here: A simpler way to find your files}.
-Retrieved from \url{https://CRAN.R-project.org/package=here}
+\leavevmode\hypertarget{ref-R-here}{}%
+Müller, K. (2017). \emph{Here: A simpler way to find your files}. Retrieved from \url{https://CRAN.R-project.org/package=here}
 
-\hypertarget{ref-R-tibble}{}
-Müller, K., \& Wickham, H. (2019). \emph{Tibble: Simple data frames}.
-Retrieved from \url{https://CRAN.R-project.org/package=tibble}
+\leavevmode\hypertarget{ref-R-tibble}{}%
+Müller, K., \& Wickham, H. (2019). \emph{Tibble: Simple data frames}. Retrieved from \url{https://CRAN.R-project.org/package=tibble}
 
-\hypertarget{ref-R-base}{}
-R Core Team. (2018). \emph{R: A language and environment for statistical
-computing}. Vienna, Austria: R Foundation for Statistical Computing.
-Retrieved from \url{https://www.R-project.org/}
+\leavevmode\hypertarget{ref-R-base}{}%
+R Core Team. (2018). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
 
-\hypertarget{ref-R-ggplot2}{}
-Wickham, H. (2016). \emph{Ggplot2: Elegant graphics for data analysis}.
-Springer-Verlag New York. Retrieved from
-\url{https://ggplot2.tidyverse.org}
+\leavevmode\hypertarget{ref-stack1998marital}{}%
+Stack, S., \& Eshleman, J. R. (1998). Marital status and happiness: A 17-nation study. \emph{Journal of Marriage and the Family}, 527--536.
 
-\hypertarget{ref-R-tidyverse}{}
-Wickham, H. (2017). \emph{Tidyverse: Easily install and load the
-'tidyverse'}. Retrieved from
-\url{https://CRAN.R-project.org/package=tidyverse}
+\leavevmode\hypertarget{ref-R-ggplot2}{}%
+Wickham, H. (2016). \emph{Ggplot2: Elegant graphics for data analysis}. Springer-Verlag New York. Retrieved from \url{https://ggplot2.tidyverse.org}
 
-\hypertarget{ref-R-forcats}{}
-Wickham, H. (2019a). \emph{Forcats: Tools for working with categorical
-variables (factors)}. Retrieved from
-\url{https://CRAN.R-project.org/package=forcats}
+\leavevmode\hypertarget{ref-R-tidyverse}{}%
+Wickham, H. (2017). \emph{Tidyverse: Easily install and load the 'tidyverse'}. Retrieved from \url{https://CRAN.R-project.org/package=tidyverse}
 
-\hypertarget{ref-R-stringr}{}
-Wickham, H. (2019b). \emph{Stringr: Simple, consistent wrappers for
-common string operations}. Retrieved from
-\url{https://CRAN.R-project.org/package=stringr}
+\leavevmode\hypertarget{ref-R-forcats}{}%
+Wickham, H. (2019a). \emph{Forcats: Tools for working with categorical variables (factors)}. Retrieved from \url{https://CRAN.R-project.org/package=forcats}
 
-\hypertarget{ref-R-tidyr}{}
-Wickham, H., \& Henry, L. (2019). \emph{Tidyr: Tidy messy data}.
-Retrieved from \url{https://CRAN.R-project.org/package=tidyr}
+\leavevmode\hypertarget{ref-R-stringr}{}%
+Wickham, H. (2019b). \emph{Stringr: Simple, consistent wrappers for common string operations}. Retrieved from \url{https://CRAN.R-project.org/package=stringr}
 
-\hypertarget{ref-R-dplyr}{}
-Wickham, H., François, R., Henry, L., \& Müller, K. (2019). \emph{Dplyr:
-A grammar of data manipulation}. Retrieved from
-\url{https://CRAN.R-project.org/package=dplyr}
+\leavevmode\hypertarget{ref-R-dplyr}{}%
+Wickham, H., François, R., Henry, L., \& Müller, K. (2019). \emph{Dplyr: A grammar of data manipulation}. Retrieved from \url{https://CRAN.R-project.org/package=dplyr}
 
-\hypertarget{ref-R-readr}{}
-Wickham, H., Hester, J., \& Francois, R. (2018). \emph{Readr: Read
-rectangular text data}. Retrieved from
-\url{https://CRAN.R-project.org/package=readr}
+\leavevmode\hypertarget{ref-R-tidyr}{}%
+Wickham, H., \& Henry, L. (2019). \emph{Tidyr: Tidy messy data}. Retrieved from \url{https://CRAN.R-project.org/package=tidyr}
 
-\hypertarget{ref-R-knitr}{}
-Xie, Y. (2015). \emph{Dynamic documents with R and knitr} (2nd ed.).
-Boca Raton, Florida: Chapman; Hall/CRC. Retrieved from
-\url{https://yihui.name/knitr/}
+\leavevmode\hypertarget{ref-R-readr}{}%
+Wickham, H., Hester, J., \& Francois, R. (2018). \emph{Readr: Read rectangular text data}. Retrieved from \url{https://CRAN.R-project.org/package=readr}
 
-\hypertarget{ref-R-kableExtra}{}
-Zhu, H. (2019). \emph{KableExtra: Construct complex table with 'kable'
-and pipe syntax}. Retrieved from
-\url{https://CRAN.R-project.org/package=kableExtra}
+\leavevmode\hypertarget{ref-R-knitr}{}%
+Xie, Y. (2015). \emph{Dynamic documents with R and knitr} (2nd ed.). Boca Raton, Florida: Chapman; Hall/CRC. Retrieved from \url{https://yihui.name/knitr/}
+
+\leavevmode\hypertarget{ref-R-kableExtra}{}%
+Zhu, H. (2019). \emph{KableExtra: Construct complex table with 'kable' and pipe syntax}. Retrieved from \url{https://CRAN.R-project.org/package=kableExtra}
 
 \endgroup
 
@@ -768,28 +700,26 @@ The final project must:
 \def\labelenumi{(\alph{enumi})}
 \tightlist
 \item
-  be a reproducible and dynamic APA manuscript produced with R Markdown,
-  via the \{papaja\} package and include references to the extant
-  literature;
+  be a reproducible and dynamic APA manuscript produced with R Markdown, via
+  the \{papaja\} package and include references to the extant literature;
 \item
   be housed on GitHub, with contributions from all authors obvious;
 \item
-  demonstrate moving data from its raw \enquote{messy} format to a tidy
-  data format through the R Markdown file, but not in the final
-  document;
+  demonstrate moving data from its raw \enquote{messy} format to a tidy data format
+  through the R Markdown file, but not in the final document;
 \item
   include at least two exploratory data visualizations, and
 \item
-  include at least summary statistics of the data in tables, although
-  fitted models of any sort are an added bonus (not literally, there are
-  not extra points for fitting a model).
+  include at least summary statistics of the data in tables, although fitted
+  models of any sort are an added bonus (not literally, there are not extra points
+  for fitting a model).
 \end{enumerate}
 
-\subsection{The points for the final project are broken down as
-follows:}\label{the-points-for-the-final-project-are-broken-down-as-follows}
+\hypertarget{the-points-for-the-final-project-are-broken-down-as-follows}{%
+\subsection{The points for the final project are broken down as follows:}\label{the-points-for-the-final-project-are-broken-down-as-follows}}
 
-\subsubsection{Writing (abstract, intro, methods, results, discussion,
-references)}\label{writing-abstract-intro-methods-results-discussion-references}
+\hypertarget{writing-abstract-intro-methods-results-discussion-references}{%
+\subsubsection{Writing (abstract, intro, methods, results, discussion, references)}\label{writing-abstract-intro-methods-results-discussion-references}}
 
 \begin{itemize}
 \tightlist
@@ -802,8 +732,8 @@ references)}\label{writing-abstract-intro-methods-results-discussion-references}
 \item
   30 points (25\%) Two data visualizations
 \item
-  20 points(10 points each) (17\%) Production of at least one table (of
-  summary statistics or model results)
+  20 points(10 points each) (17\%) Production of at least one table (of summary
+  statistics or model results)
 \item
   10 points (8\%)
 \end{itemize}

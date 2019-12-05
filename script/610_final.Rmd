@@ -357,8 +357,12 @@ ggplot(aes(feeling_of_happiness, n))+
 
 # Introduction
 
+<<<<<<< Updated upstream
 Study of happiness and its causal factors has been flourished in recent years. Scholars have studied the relationship between happines and political system [@inglehart200911] [add others if you find more...]. This project explores the relationship between happiness and some candidate variables, namely marital status, religious affiliation, level of income, status of heath, and level of trust. We use individual level survey of more than 85,000 respondents across 60 countries and societies around the world in World Value Survey Dataset 2012. 
 
+=======
+Asha trying citation [@stack1998marital]
+>>>>>>> Stashed changes
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
