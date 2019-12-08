@@ -43,8 +43,12 @@ mask              : no
 draft             : no
 
 documentclass     : "apa6"
-classoption       : "man"
+classoption       : "man, fleqn, noextraspace"
 output            : papaja::apa6_pdf
+
+header-includes:
+  - \raggedbottom
+  - \setlength{\parskip}{0pt}
 ---
 
 ```{r setup, include = FALSE}

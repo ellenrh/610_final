@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  5 DEC 2019 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  8 DEC 2019 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9,7 +9,16 @@ LaTeX2e <2018-12-01>
 Document Class: apa6 2018/09/01 v2.33 APA formatting (6th edition)
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\dimen102
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -22,7 +31,7 @@ File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\bibindent=\dimen102
+\bibindent=\dimen103
 ) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count88
@@ -84,14 +93,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count89
 \Gm@cntv=\count90
 \c@Gm@tempcnt=\count91
-\Gm@bindingoffset=\dimen103
-\Gm@wd@mp=\dimen104
-\Gm@odd@mp=\dimen105
-\Gm@even@mp=\dimen106
-\Gm@layoutwidth=\dimen107
-\Gm@layoutheight=\dimen108
-\Gm@layouthoffset=\dimen109
-\Gm@layoutvoffset=\dimen110
+\Gm@bindingoffset=\dimen104
+\Gm@wd@mp=\dimen105
+\Gm@odd@mp=\dimen106
+\Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks15
 ) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -108,27 +117,27 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 ) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen113
-\lightrulewidth=\dimen114
-\cmidrulewidth=\dimen115
-\belowrulesep=\dimen116
-\belowbottomsep=\dimen117
-\aboverulesep=\dimen118
-\abovetopsep=\dimen119
-\cmidrulesep=\dimen120
-\cmidrulekern=\dimen121
-\defaultaddspace=\dimen122
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
 \@cmidla=\count92
 \@cmidlb=\count93
-\@aboverulesep=\dimen123
-\@belowrulesep=\dimen124
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
 \@thisruleclass=\count94
 \@lastruleclass=\count95
-\@thisrulewidth=\dimen125
+\@thisrulewidth=\dimen126
 )
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threepart
 table.sty
@@ -150,13 +159,13 @@ Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen126
-\captionmargin@=\dimen127
-\captionwidth=\dimen128
-\caption@tempdima=\dimen129
-\caption@indent=\dimen130
-\caption@parindent=\dimen131
-\caption@hangindent=\dimen132
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
 )
 \c@caption@flags=\count96
 \c@ContinuedFloat=\count97
@@ -222,11 +231,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
-\ex@=\dimen133
+\ex@=\dimen134
 )) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 LaTeX Info: Redefining \boldsymbol on input line 28.
-\pmbraise@=\dimen134
+\pmbraise@=\dimen135
 ) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
@@ -242,7 +251,7 @@ LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
 \Mathstrutbox@=\box31
 \strutbox@=\box32
-\big@size=\dimen135
+\big@size=\dimen136
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \macc@depth=\count110
@@ -255,12 +264,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \column@=\count115
 \maxfields@=\count116
 \andhelp@=\toks21
-\eqnshift@=\dimen136
-\alignsep@=\dimen137
-\tagshift@=\dimen138
-\tagwidth@=\dimen139
-\totwidth@=\dimen140
-\lineht@=\dimen141
+\eqnshift@=\dimen137
+\alignsep@=\dimen138
+\tagshift@=\dimen139
+\tagwidth@=\dimen140
+\totwidth@=\dimen141
+\lineht@=\dimen142
 \@envbody=\toks22
 \multlinegap=\skip66
 \multlinetaggap=\skip67
@@ -492,7 +501,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen142
+\@linkdim=\dimen143
 \Hy@linkcounter=\count117
 \Hy@pagecounter=\count118
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -518,10 +527,10 @@ Package hyperref Info: Bookmarks ON on input line 4772.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
-\XeTeXLinkMargin=\dimen143
+\XeTeXLinkMargin=\dimen144
 \Fld@menulength=\count121
-\Field@Width=\dimen144
-\Fld@charsize=\dimen145
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
 Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
@@ -591,7 +600,7 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \LTpre=\skip71
 \LTpost=\skip72
 \LTchunksize=\count133
-\LTcapwidth=\dimen146
+\LTcapwidth=\dimen147
 \LT@head=\box33
 \LT@firsthead=\box34
 \LT@foot=\box35
@@ -608,24 +617,24 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip73
 \multirow@cntb=\count138
 \multirow@dima=\skip74
-\bigstrutjot=\dimen147
+\bigstrutjot=\dimen148
 ) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
-\col@sep=\dimen148
+\col@sep=\dimen149
 \ar@mcellbox=\box37
-\extrarowheight=\dimen149
+\extrarowheight=\dimen150
 \NC@list=\toks28
 \extratabsurround=\skip75
 \backup@length=\skip76
 \ar@cellbox=\box38
 )
-\TX@col@width=\dimen150
-\TX@old@table=\dimen151
-\TX@old@col=\dimen152
-\TX@target=\dimen153
-\TX@delta=\dimen154
+\TX@col@width=\dimen151
+\TX@old@table=\dimen152
+\TX@old@col=\dimen153
+\TX@target=\dimen154
+\TX@delta=\dimen155
 \TX@cols=\count139
 \TX@ftn=\toks29
 )
@@ -647,16 +656,16 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count140
 \output=\toks30
 \linenoprevgraf=\count141
-\linenumbersep=\dimen155
-\linenumberwidth=\dimen156
+\linenumbersep=\dimen156
+\linenumberwidth=\dimen157
 \c@linenumber=\count142
 \c@pagewiselinenumber=\count143
 \c@LN@truepage=\count144
 \c@internallinenumber=\count145
 \c@internallinenumbers=\count146
-\quotelinenumbersep=\dimen157
-\bframerule=\dimen158
-\bframesep=\dimen159
+\quotelinenumbersep=\dimen158
+\bframerule=\dimen159
+\bframesep=\dimen160
 \bframebox=\box39
 
 LaTeX Warning: Command \@parboxrestore  has changed.
@@ -669,30 +678,30 @@ Package csquotes Info: ... none found.
 (./610_final.aux)
 \openout1 = `610_final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 114.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 116.
 
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 114.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 116.
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -762,7 +771,7 @@ Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box40
-Package hyperref Info: Link coloring OFF on input line 114.
+Package hyperref Info: Link coloring OFF on input line 116.
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -772,256 +781,121 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 114.
-LaTeX Info: Redefining \pageref on input line 114.
-LaTeX Info: Redefining \nameref on input line 114.
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
 (./610_final.out) (./610_final.out)
 \@outlinefile=\write5
 \openout5 = `610_final.out'.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 116.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 118.
 
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 116.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 118.
 
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 116.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 118.
 
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 116
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 118
 .
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 116
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 118
 .
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 116.
+(Font)              <12> on input line 118.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 116.
+(Font)              <8> on input line 118.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 116.
-LaTeX Font Info:    Try loading font information for U+msa on input line 116.
+(Font)              <6> on input line 118.
+LaTeX Font Info:    Try loading font information for U+msa on input line 118.
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 116.
+LaTeX Font Info:    Try loading font information for U+msb on input line 118.
 (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/Users/macintosh/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.
 map}
 
 ] [2]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 117.
 
-(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Overfull \hbox (36.59523pt too wide) in paragraph at lines 125--125
-[]\T1/lmtt/m/n/12 ## [7] "HT: Missing-Dropped out survey; RU: Inappropriate res
-ponse{Inappropriate}"[] 
- []
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 142.
 
-<610_final_files/figure-latex/happiness and family savings JW-1.pdf, id=62, 469
-.755pt x 325.215pt>
-File: 610_final_files/figure-latex/happiness and family savings JW-1.pdf Graphi
-c file (type pdf)
-<use 610_final_files/figure-latex/happiness and family savings JW-1.pdf>
-Package pdftex.def Info: 610_final_files/figure-latex/happiness and family savi
-ngs JW-1.pdf  used on input line 165.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<610_final_files/figure-latex/happiness and family savings JW-2.pdf, id=63, 469
-.755pt x 325.215pt>
-File: 610_final_files/figure-latex/happiness and family savings JW-2.pdf Graphi
-c file (type pdf)
-<use 610_final_files/figure-latex/happiness and family savings JW-2.pdf>
-Package pdftex.def Info: 610_final_files/figure-latex/happiness and family savi
-ngs JW-2.pdf  used on input line 166.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 165--167
-[][] 
- []
-
-[3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[4 <./610_final_files/figure-latex/happiness and family savings JW-1.pdf>]
-Overfull \hbox (11.89522pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##    family_savings                   feeling_of_happine~   
-  n total percent[] 
- []
-
-
-Overfull \hbox (11.89522pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##    <fct>                            <fct>               <i
-nt> <int>   <dbl>[] 
- []
-
-
-Overfull \hbox (11.88121pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##  1 Save money                       Not at all happy      
-203 21889 0.00927[] 
- []
-
-
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##  2 Spent some savings and borrowed~ Not at all happy      
-207 11331 0.0183[] 
- []
-
-
-Overfull \hbox (5.6992pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##  3 Just get by                      Not at all happy      
-813 34669 0.0235[] 
- []
-
-
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##  4 Spent savings and borrowed money Not at all happy      
-400  8333 0.0480[] 
- []
-
-
-Overfull \hbox (5.6922pt too wide) in paragraph at lines 188--188
-[]\T1/lmtt/m/n/12 ##  5 Save money                       Not very happy       1
-449 21889 0.0662[] 
- []
-
-[5 <./610_final_files/figure-latex/happiness and family savings JW-2.pdf>]
-<610_final_files/figure-latex/happiness and family savings JW-3.pdf, id=87, 469
-.755pt x 325.215pt>
-File: 610_final_files/figure-latex/happiness and family savings JW-3.pdf Graphi
-c file (type pdf)
-<use 610_final_files/figure-latex/happiness and family savings JW-3.pdf>
-Package pdftex.def Info: 610_final_files/figure-latex/happiness and family savi
-ngs JW-3.pdf  used on input line 192.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[6 <./610_final_files/figure-latex/happiness and family savings JW-3.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 564
-.
-(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[19]
-<610_final_files/figure-latex/trust and health-1.pdf, id=154, 469.755pt x 325.2
-15pt>
-File: 610_final_files/figure-latex/trust and health-1.pdf Graphic file (type pd
-f)
-<use 610_final_files/figure-latex/trust and health-1.pdf>
-Package pdftex.def Info: 610_final_files/figure-latex/trust and health-1.pdf  u
-sed on input line 581.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 581--582
-[][]  
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[20]
-<610_final_files/figure-latex/trust and health-2.pdf, id=159, 469.755pt x 325.2
-15pt>
-File: 610_final_files/figure-latex/trust and health-2.pdf Graphic file (type pd
-f)
-<use 610_final_files/figure-latex/trust and health-2.pdf>
-Package pdftex.def Info: 610_final_files/figure-latex/trust and health-2.pdf  u
-sed on input line 607.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<610_final_files/figure-latex/unnamed-chunk-1-1.pdf, id=160, 469.755pt x 325.21
-5pt>
+<610_final_files/figure-latex/unnamed-chunk-1-1.pdf, id=56, 469.755pt x 325.215
+pt>
 File: 610_final_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf
 )
 <use 610_final_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 610_final_files/figure-latex/unnamed-chunk-1-1.pdf  us
-ed on input line 618.
+ed on input line 154.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[21 <./610_final_files/figure-latex/trust and health-1.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<610_final_files/figure-latex/unnamed-chunk-2-1.pdf, id=57, 469.755pt x 325.215
+pt>
+File: 610_final_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf
+)
+<use 610_final_files/figure-latex/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: 610_final_files/figure-latex/unnamed-chunk-2-1.pdf  us
+ed on input line 165.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+[3]
+Overfull \vbox (49.99586pt too high) has occurred while \output is active []
 
-[22 <./610_final_files/figure-latex/trust and health-2.pdf>] [23 <./610_final_f
-iles/figure-latex/unnamed-chunk-1-1.pdf>] [24] [25] [26]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 797.
+[4 <./610_final_files/figure-latex/unnamed-chunk-1-1.pdf> <./610_final_files/fi
+gure-latex/unnamed-chunk-2-1.pdf>]
+Overfull \hbox (7.68806pt too wide) in paragraph at lines 185--209
+ [] 
+ []
 
-(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) AED endfloat: Processing end Figures and Tables [27]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 812.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 812.
+<610_final_files/figure-latex/happiness by family savings tables and figures-1.
+pdf, id=78, 469.755pt x 325.215pt>
+File: 610_final_files/figure-latex/happiness by family savings tables and figur
+es-1.pdf Graphic file (type pdf)
+<use 610_final_files/figure-latex/happiness by family savings tables and figure
+s-1.pdf>
+Package pdftex.def Info: 610_final_files/figure-latex/happiness by family savin
+gs tables and figures-1.pdf  used on input line 214.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+[5 <./610_final_files/figure-latex/happiness by family savings tables and figur
+es-1.pdf>] [6] [7] AED endfloat: Processing end Figures and Tables [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
 (./610_final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 812.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 812.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
 Package rerunfilecheck Info: File `610_final.out' has not changed.
-(rerunfilecheck)             Checksum: 6CB17B8D537587B0E900CFC00BE3EEB7;2239.
+(rerunfilecheck)             Checksum: 4C40CDE15B786FA4F151F8B6CA1EB3D6;1631.
  ) 
 Here is how much of TeX's memory you used:
- 13687 strings out of 494553
- 201048 string characters out of 6176379
- 280470 words of memory out of 5000000
- 17065 multiletter control sequences out of 15000+600000
- 48622 words of font info for 53 fonts, out of 8000000 for 9000
+ 13538 strings out of 494553
+ 197978 string characters out of 6176379
+ 281463 words of memory out of 5000000
+ 16963 multiletter control sequences out of 15000+600000
+ 47623 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,10n,47p,796b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/macintosh/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/
-Users/macintosh/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</Users
-/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/
-macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/ma
-cintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/macin
-tosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/macint
-osh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></Users/macintos
-h/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 610_final.pdf (27 pages, 199094 bytes).
+ 43i,10n,47p,796b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/macintosh/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</U
+sers/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Us
+ers/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></User
+s/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/m
+acintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/ma
+cintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb>
+Output written on 610_final.pdf (8 pages, 133311 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
