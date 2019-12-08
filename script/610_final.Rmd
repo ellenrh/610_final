@@ -61,9 +61,6 @@ library(knitr)
 
 ```
 
-```{r APA table, results= 'asis'}
-
-```
 
 ```{r loading the data}
 
@@ -343,12 +340,12 @@ ggplot(aes(feeling_of_happiness, n))+
 ```
 
 # Introduction
+
 Study of happiness and its causal factors has been flourished in recent years. Scholars have studied the relationship between happines and variables ranging from the political system to cultural and economic factors to  [@inglehart200911; @schyns1998crossnational].This project explores the relationship between happiness and some candidate variables, namely marital status, level of family savings, status of heath, and level of trust. 
 
 # Methods
 
 This project drew from survey data from the [World Values Survey](http://www.worldvaluessurvey.org/WVSContents.jsp). This is a survey of more than 85,000 respondents across 60 countries and societies around the world. We used data from the most recent wave which can be accessed [here](http://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp). Our data analyses are descriptive and exploratory.  
-
 ## Data analysis and results
 
 ### Happiness and trust
