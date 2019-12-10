@@ -27,9 +27,9 @@ authornote: |
   We thank Dr. Nese for his guidance in this project. All mistakes remain ours. 
 
 abstract: |
-  A secondary data analysis was carried out to explore association between hapiness and other factors like marriage, trust, family savings and health. Data was obtained from World Value Survey. Data analysis involved descriptive statistics and exploratory data visualization using R. Further analysis is recommended to find correlation between predictor variables like marriage, trust, health and family savings and the outcome variable happiness.
+  A secondary data analysis was carried out to explore association between happiness and other factors like marriage, trust, family savings and health. Data was obtained from World Value Survey. Data analysis involved descriptive statistics and exploratory data visualization using R. Results indicate that happiness is positively correlated with family savings, health and trust.
   
-keywords          : "happiness, health, family savings and world valuw survey"
+keywords          : "happiness, health, family savings, trust and world value survey"
 
 
 bibliography      : [r-references.bib]
@@ -342,7 +342,6 @@ ggplot(aes(feeling_of_happiness, n))+
   theme(axis.text.x = element_text(angle = 60, hjust = 1))
 
 ```
-
 # Introduction
 
 Study of happiness and its causal factors has flourished in recent years. Scholars have studied the relationship between happiness and variables ranging from the political system to cultural and economic factors [@inglehart200911; @schyns1998crossnational]. This project explores the relationship between happiness and some candidate variables, namely marital status, religious affiliation, level of income, status of heath, and level of trust. We use individual level survey of more than 85,000 respondents across 60 countries and societies around the world in World Value Survey Dataset 2012. 
@@ -393,7 +392,7 @@ Our results illuminate a number of connections between happiness levels and othe
 
 Data for happiness levels overall were normally distributed, with the majority of participants reporting a moderate level of happiness, and fewer reporting very low or very high levels of happiness. This pattern continued to be evident when data were grouped by our independent variables.
 
-Contrary to the conventional belief that people who feel they can trust people around them should feel more secured, hence happier. The data shows us somewhat the opposite. Those who say they should be careful with the fellows surrounding them indicates higher level of happiness.
+Contrary to the conventional belief that people who feel happy they can trust people around them should feel more secured, hence happier. The data shows somewhat the opposite. Those who say they should be careful with the fellows surrounding them indicates higher level of happiness.
 
 Results indicate that good health is associated with greater feelings of happiness. This affirms prior research by @gandelman2013happiness which found a strong relationship between self-rated health status and perceived life quality.
 
