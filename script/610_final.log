@@ -1,14 +1,34 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.9)  5 DEC 2019 15:03
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  8 DEC 2019 12:37
+>>>>>>> master
 entering extended mode
 **./610_final.tex
 (610_final.tex
 LaTeX2e <2019-10-01>
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apa6\apa6.cls"
 Document Class: apa6 2018/09/01 v2.33 APA formatting (6th edition)
+<<<<<<< HEAD
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
 File: size12.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+=======
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\dimen102
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+>>>>>>> master
 )
 \c@part=\count80
 \c@section=\count81
@@ -20,11 +40,17 @@ File: size12.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
+<<<<<<< HEAD
 \bibindent=\dimen102
 )
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.s
 ty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+=======
+\bibindent=\dimen103
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+>>>>>>> master
 \etb@tempcnta=\count88
 )
 Class apa6 Info: No bibliography package was specified; defaulting to (but not 
@@ -93,14 +119,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count89
 \Gm@cntv=\count90
 \c@Gm@tempcnt=\count91
-\Gm@bindingoffset=\dimen103
-\Gm@wd@mp=\dimen104
-\Gm@odd@mp=\dimen105
-\Gm@even@mp=\dimen106
-\Gm@layoutwidth=\dimen107
-\Gm@layoutheight=\dimen108
-\Gm@layouthoffset=\dimen109
-\Gm@layoutvoffset=\dimen110
+\Gm@bindingoffset=\dimen104
+\Gm@wd@mp=\dimen105
+\Gm@odd@mp=\dimen106
+\Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks15
 
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.c
@@ -125,6 +151,7 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 .def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
+<<<<<<< HEAD
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
@@ -141,13 +168,29 @@ Package: booktabs 2019/10/08 v1.6180339 publication quality tables
 \cmidrulesep=\dimen120
 \cmidrulekern=\dimen121
 \defaultaddspace=\dimen122
+=======
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+>>>>>>> master
 \@cmidla=\count92
 \@cmidlb=\count93
-\@aboverulesep=\dimen123
-\@belowrulesep=\dimen124
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
 \@thisruleclass=\count94
 \@lastruleclass=\count95
-\@thisrulewidth=\dimen125
+\@thisrulewidth=\dimen126
 )
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/threeparttable\thre
 eparttable.sty"
@@ -172,13 +215,13 @@ Package: caption 2019/09/01 v3.3d Customizing captions (AR)
 y"
 Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen126
-\captionmargin@=\dimen127
-\captionwidth=\dimen128
-\caption@tempdima=\dimen129
-\caption@indent=\dimen130
-\caption@parindent=\dimen131
-\caption@hangindent=\dimen132
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
 )
 \c@caption@flags=\count96
 \c@ContinuedFloat=\count97
@@ -255,6 +298,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
+<<<<<<< HEAD
 \ex@=\dimen133
 )) ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
 ty"
@@ -263,6 +307,14 @@ LaTeX Info: Redefining \boldsymbol on input line 28.
 \pmbraise@=\dimen134
 ) ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
 y"
+=======
+\ex@=\dimen134
+)) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+LaTeX Info: Redefining \boldsymbol on input line 28.
+\pmbraise@=\dimen135
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+>>>>>>> master
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count105
@@ -277,9 +329,15 @@ LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
 \Mathstrutbox@=\box31
 \strutbox@=\box32
+<<<<<<< HEAD
 \big@size=\dimen135
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+=======
+\big@size=\dimen136
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+>>>>>>> master
 \macc@depth=\count110
 \c@MaxMatrixCols=\count111
 \dotsspace@=\muskip10
@@ -290,12 +348,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \column@=\count115
 \maxfields@=\count116
 \andhelp@=\toks21
-\eqnshift@=\dimen136
-\alignsep@=\dimen137
-\tagshift@=\dimen138
-\tagwidth@=\dimen139
-\totwidth@=\dimen140
-\lineht@=\dimen141
+\eqnshift@=\dimen137
+\alignsep@=\dimen138
+\tagshift@=\dimen139
+\tagwidth@=\dimen140
+\totwidth@=\dimen141
+\lineht@=\dimen142
 \@envbody=\toks22
 \multlinegap=\skip66
 \multlinetaggap=\skip67
@@ -564,11 +622,18 @@ sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen143
+<<<<<<< HEAD
 \Hy@linkcounter=\count119
 \Hy@pagecounter=\count120
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 "
 File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
+=======
+\Hy@linkcounter=\count117
+\Hy@pagecounter=\count118
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+>>>>>>> master
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -590,6 +655,7 @@ Package hyperref Info: Bookmarks ON on input line 4793.
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+<<<<<<< HEAD
 LaTeX Info: Redefining \url on input line 5152.
 \XeTeXLinkMargin=\dimen144
 \Fld@menulength=\count123
@@ -607,6 +673,25 @@ LaTeX Info: Redefining \pageref on input line 6497.
 \Hy@abspage=\count124
 \c@Item=\count125
 \c@Hfootnote=\count126
+=======
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen144
+\Fld@menulength=\count121
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count122
+\c@Item=\count123
+\c@Hfootnote=\count124
+>>>>>>> master
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -670,6 +755,7 @@ Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 \symugrf@m=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+<<<<<<< HEAD
 ) ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable.s
 ty"
 Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
@@ -678,6 +764,15 @@ Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
 \LTpre=\skip72
 \LTpost=\skip73
 \LTchunksize=\count135
+=======
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
+\LTleft=\skip69
+\LTright=\skip70
+\LTpre=\skip71
+\LTpost=\skip72
+\LTchunksize=\count133
+>>>>>>> master
 \LTcapwidth=\dimen147
 \LT@head=\box33
 \LT@firsthead=\box34
@@ -695,6 +790,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.s
 ty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+<<<<<<< HEAD
 \multirow@colwidth=\skip74
 \multirow@cntb=\count140
 \multirow@dima=\skip75
@@ -710,6 +806,22 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \NC@list=\toks29
 \extratabsurround=\skip76
 \backup@length=\skip77
+=======
+\multirow@colwidth=\skip73
+\multirow@cntb=\count138
+\multirow@dima=\skip74
+\bigstrutjot=\dimen148
+) (/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen149
+\ar@mcellbox=\box37
+\extrarowheight=\dimen150
+\NC@list=\toks28
+\extratabsurround=\skip75
+\backup@length=\skip76
+>>>>>>> master
 \ar@cellbox=\box38
 )
 \TX@col@width=\dimen151
@@ -717,8 +829,13 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \TX@old@col=\dimen153
 \TX@target=\dimen154
 \TX@delta=\dimen155
+<<<<<<< HEAD
 \TX@cols=\count141
 \TX@ftn=\toks30
+=======
+\TX@cols=\count139
+\TX@ftn=\toks29
+>>>>>>> master
 )
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/threeparttablex\thr
 eeparttablex.sty"
@@ -736,6 +853,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \longtablewidth=\skip79
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+<<<<<<< HEAD
 \linenopenalty=\count142
 \output=\toks31
 \linenoprevgraf=\count143
@@ -746,6 +864,18 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \c@LN@truepage=\count146
 \c@internallinenumber=\count147
 \c@internallinenumbers=\count148
+=======
+\linenopenalty=\count140
+\output=\toks30
+\linenoprevgraf=\count141
+\linenumbersep=\dimen156
+\linenumberwidth=\dimen157
+\c@linenumber=\count142
+\c@pagewiselinenumber=\count143
+\c@LN@truepage=\count144
+\c@internallinenumber=\count145
+\c@internallinenumbers=\count146
+>>>>>>> master
 \quotelinenumbersep=\dimen158
 \bframerule=\dimen159
 \bframesep=\dimen160
@@ -761,6 +891,7 @@ Package csquotes Info: ... none found.
 (610_final.aux)
 \openout1 = `610_final.aux'.
 
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
 LaTeX Font Info:    ... okay on input line 109.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
@@ -787,6 +918,33 @@ LaTeX Font Info:    ... okay on input line 109.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
 9.
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 116.
+
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 116.
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+>>>>>>> master
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 *geometry* driver: auto-detecting
@@ -867,6 +1025,7 @@ ty"
 Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
+<<<<<<< HEAD
 LaTeX Info: Redefining \microtypecontext on input line 109.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -878,6 +1037,12 @@ LaTeX Info: Redefining \showhyphens on input line 109.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
+=======
+\AtBeginShipoutBox=\box40
+Package hyperref Info: Link coloring OFF on input line 116.
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+>>>>>>> master
 
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cf
 g"
@@ -897,6 +1062,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count155
 )
+<<<<<<< HEAD
 LaTeX Info: Redefining \ref on input line 109.
 LaTeX Info: Redefining \pageref on input line 109.
 LaTeX Info: Redefining \nameref on input line 109.
@@ -947,6 +1113,52 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 LaTeX Font Info:    Trying to load font information for U+msb on input line 111
 .
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+=======
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
+(./610_final.out) (./610_final.out)
+\@outlinefile=\write5
+\openout5 = `610_final.out'.
+
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 118.
+
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 118.
+
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 118.
+
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 118
+.
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 118
+.
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 118.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 118.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 118.
+LaTeX Font Info:    Try loading font information for U+msa on input line 118.
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 118.
+(/Users/macintosh/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+>>>>>>> master
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb.cf
@@ -959,6 +1171,7 @@ File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 ) [1{C:/Users/asha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2]
+<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 12.
 ("C:\Users\asha\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
@@ -1179,4 +1392,74 @@ PDF statistics:
  298 PDF objects out of 1000 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
  6263 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 142.
+
+<610_final_files/figure-latex/unnamed-chunk-1-1.pdf, id=56, 469.755pt x 325.215
+pt>
+File: 610_final_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf
+)
+<use 610_final_files/figure-latex/unnamed-chunk-1-1.pdf>
+Package pdftex.def Info: 610_final_files/figure-latex/unnamed-chunk-1-1.pdf  us
+ed on input line 154.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<610_final_files/figure-latex/unnamed-chunk-2-1.pdf, id=57, 469.755pt x 325.215
+pt>
+File: 610_final_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf
+)
+<use 610_final_files/figure-latex/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: 610_final_files/figure-latex/unnamed-chunk-2-1.pdf  us
+ed on input line 165.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+[3]
+Overfull \vbox (49.99586pt too high) has occurred while \output is active []
+
+[4 <./610_final_files/figure-latex/unnamed-chunk-1-1.pdf> <./610_final_files/fi
+gure-latex/unnamed-chunk-2-1.pdf>]
+Overfull \hbox (7.68806pt too wide) in paragraph at lines 185--209
+ [] 
+ []
+
+<610_final_files/figure-latex/happiness by family savings tables and figures-1.
+pdf, id=78, 469.755pt x 325.215pt>
+File: 610_final_files/figure-latex/happiness by family savings tables and figur
+es-1.pdf Graphic file (type pdf)
+<use 610_final_files/figure-latex/happiness by family savings tables and figure
+s-1.pdf>
+Package pdftex.def Info: 610_final_files/figure-latex/happiness by family savin
+gs tables and figures-1.pdf  used on input line 214.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+[5 <./610_final_files/figure-latex/happiness by family savings tables and figur
+es-1.pdf>] [6] [7] AED endfloat: Processing end Figures and Tables [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
+(./610_final.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
+Package rerunfilecheck Info: File `610_final.out' has not changed.
+(rerunfilecheck)             Checksum: 4C40CDE15B786FA4F151F8B6CA1EB3D6;1631.
+ ) 
+Here is how much of TeX's memory you used:
+ 13538 strings out of 494553
+ 197978 string characters out of 6176379
+ 281463 words of memory out of 5000000
+ 16963 multiletter control sequences out of 15000+600000
+ 47623 words of font info for 50 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 43i,10n,47p,796b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/macintosh/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</U
+sers/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Us
+ers/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></User
+s/macintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/m
+acintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/ma
+cintosh/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb>
+Output written on 610_final.pdf (8 pages, 133311 bytes).
+PDF statistics:
+ 138 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> master
 

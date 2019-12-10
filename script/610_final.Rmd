@@ -1,23 +1,23 @@
 ---
-title             : "What explains happiness? The relationships between happiness and marrige, religion health, trust, and                        saving"
-shorttitle        : "What explains happiness?"
+title             : "Factors affecting happiness: marriage, health, trust and family savings"
+shorttitle        : "Factors affecting happiness"
 
 author: 
   - name          : "Asha Yadav"
     affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
+    corresponding : yes    
     address       : "Postal address"
-    email         : "my@email.com"
+    email         : "ayadav@uoregon.edu"
   - name          : "Joanna"
     affiliation   : "1"
-    corresponding : no    # Define only one corresponding author
+    corresponding : no    
     address       : "Postal address"
-    email         : "my@email.com"
+    email         : "jwrigh23@uoregon.edu"
   - name          : "Thuy"
     affiliation   : "1"
-    corresponding : no    # Define only one corresponding author
+    corresponding : no    
     address       : "Postal address"
-    email         : "my@email.com"
+    email         : "thueyvei@gmail.com"
 
 affiliation:
   - id            : "1"
@@ -43,14 +43,17 @@ mask              : no
 draft             : no
 
 documentclass     : "apa6"
-classoption       : "man"
+classoption       : "man, fleqn, noextraspace"
 output            : papaja::apa6_pdf
+
+header-includes:
+  - \raggedbottom
+  - \setlength{\parskip}{0pt}
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(warning = FALSE,
-                      echo = FALSE
-                      )
+                      echo = FALSE)
 library("papaja")
 library(tidyverse)
 library(rio)
@@ -62,9 +65,6 @@ library(knitr)
 
 ```
 
-```{r APA table, results= 'asis'}
-
-```
 
 ```{r loading the data}
 
@@ -93,8 +93,6 @@ data <- data %>%
 
 
 ```{r cleaning the data: recoding levels}
-
-unique(data$feeling_of_happiness)
 
 data <- data %>%
     mutate(feeling_of_happiness = fct_recode(feeling_of_happiness,
@@ -195,76 +193,65 @@ data <- data %>%
 ```
 
 
-```{r happiness and family savings JW}
+```{r happiness and family savings JW, include=FALSE}
 
-# further tidying the data to use a subset: 
-
-subset_JW <- data %>%
-  select(family_savings, feeling_of_happiness)
+save_money <- 21889
+spent_some_savings <- 11331
+spent_savings <- 8333
+just_get_by <- 34669
+total <- 21889 + 11331 + 8333 + 34669
+percent_save_money <- (save_money/total)*100
+percent_spent_some_savings <- (spent_some_savings/total)*100
+percent_spent_savings <- (spent_savings/total)*100
+percent_just_get_by <- (just_get_by/total)*100
 
 happiness_by_family_savings <- data %>%
   group_by(family_savings) %>%
-  count(feeling_of_happiness)
+  count(feeling_of_happiness) %>%
+  mutate(total = sum(n)) %>%
+  mutate(percent = (n/total)*100)
 
-# making a table: 
+savings_table_1 <- apa_table(happiness_by_family_savings)
 
-kable(happiness_by_family_savings)
-
-# exploring the data with visualizations:
-
-happiness_by_family_savings %>%
+figure_savings_1 <- happiness_by_family_savings %>%
   ggplot(aes(feeling_of_happiness, n)) +
   geom_col(fill = "dark blue") +
   facet_wrap(~family_savings) +
   labs(title = "Figure 1", 
        subtitle = "Happiness levels by family savings: Raw numbers",
-       x = "Level of happiness",
+       x = "Feeling of happiness",
        y = "Number of people") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-# to chart by percentages: 
-
-happiness_by_family_savings <- happiness_by_family_savings %>%
-  mutate(total = sum(n)) %>%
-  mutate(percent = n/total)
-
-happiness_by_family_savings %>%
+figure_savings_2 <- happiness_by_family_savings %>%
   group_by(family_savings) %>%
 ggplot(aes(feeling_of_happiness, percent)) +
   geom_col(fill = "dark blue") +
   facet_wrap(~family_savings) +
   labs(title = "Figure 2", 
        subtitle = "Happiness levels by family savings: percentage",
-       x = "Level of happiness",
-       y = "Percentage of total") +
+       x = "Feeling of happiness",
+       y = "Percent") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-
-# it would be interesting to look at these percentages in order  to compare happiness levels amongst groups:     
-
-happiness_by_family_savings %>%
+savings_table_2 <- happiness_by_family_savings %>%
   as_tibble() %>%
   arrange(percent)
 
-# or, another way to visualize this would be: 
-
-happiness_by_family_savings %>%
+figure_savings_3 <- happiness_by_family_savings %>%
   ggplot(aes(feeling_of_happiness, percent, colour = family_savings)) +
   geom_point() +
   geom_smooth(se = FALSE, method = lm) +
   labs(Title = "Figure 3",
-       subtitle = "Amother way of looking at happiness by family savings: percentage")
+       subtitle = "Happiness by family savings: percentage", 
+       x = "Feeling of Happiness",
+       y = "Percent") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 ```
-
-As Figure 3 shows, although patterns of happiness levels are similar overall (e.g. most people report being "Rather Happy", fewest people report being "Not happy at all"), there are some differences of happiness level distributions between groups. A greater percentage of those with the lowest level of family savings (those who spent savings and borrowed money) reported being "Not at all happy" or "Not very happy". On the other hand, the greatest percentage of people reporting being "Rather happy" were those who reported just getting by, and the greatest percentage of people reporting the highest level of happiness were those in the strongest financial position - those who saved money.
-
-(NOTE: I'd like to use inline code here to reference exact percentages. How do put one cell value into inline code??)
-
 
 
 ```{r trying out pivot_wider and pivot_longer}
@@ -311,7 +298,8 @@ happiness_health_longer <-happiness_health_wider %>%
 fig_health <- happiness_health_longer %>% 
 ggplot(aes(state_of_health, number_of_people, fill = factor(level_happy)))+
   geom_col(position = "fill", stat = "identity") +
-  labs(title = "Feeling of happiness by self-rated state of health",
+  labs(title = "Figure 2", 
+      subtitle = "Feeling of happiness by self-rated state of health",
        x = "Self-rated state of health",
        y = "Feeling of happiness (Percent)",
        caption = "Survey of more than 85,000 respondents across the world. Source: WVS 2012")+
@@ -321,7 +309,7 @@ ggplot(aes(state_of_health, number_of_people, fill = factor(level_happy)))+
 ```
 
 
-```{r trust}
+```{r trust, include=FALSE }
 
 trust <- sum(255 + 1528 + 10369 + 6499) 
 caution <- sum(1368 + 7619 + 29072 + 19512)
@@ -345,7 +333,8 @@ fig_trust <- happiness_trust %>%
 ggplot(aes(feeling_of_happiness, n))+
   geom_col(color = "red", fill = "lightblue")+
   facet_wrap(~most_people_trusted) +
-  labs(title = "Feeling of happiness by trust of people",
+  labs(title = "Figure 1", 
+      subtitle = "Feeling of happiness by trust of people",
        x = "Feeling of happniess",
        y = "Number of people",
        caption = "Survey of more than 85,000 respondents across the world. Source: WVS 2012") +
@@ -354,46 +343,73 @@ ggplot(aes(feeling_of_happiness, n))+
 
 ```
 
-
 # Introduction
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Study of happiness and its causal factors has been flourished in recent years. Scholars have studied the relationship between happines and political system [@inglehart200911] [add others if you find more...]. This project explores the relationship between happiness and some candidate variables, namely marital status, religious affiliation, level of income, status of heath, and level of trust. We use individual level survey of more than 85,000 respondents across 60 countries and societies around the world in World Value Survey Dataset 2012. 
 
 =======
 Asha trying citation [@stack1998marital]
 >>>>>>> Stashed changes
+=======
+Study of happiness and its causal factors has been flourished in recent years. Scholars have studied the relationship between happines and variables ranging from the political system to cultural and economic factors to  [@inglehart200911; @schyns1998crossnational].This project explores the relationship between happiness and some candidate variables, namely marital status, level of family savings, status of heath, and level of trust. 
+>>>>>>> master
 
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
-
-## Data analysis
+This project drew from survey data from the [World Values Survey](http://www.worldvaluessurvey.org/WVSContents.jsp). This is a survey of more than 85,000 respondents across 60 countries and societies around the world. We used data from the most recent wave which can be accessed [here](http://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp). Our data analyses are descriptive and exploratory.  
+## Data analysis and results
 
 ### Happiness and trust
 
-In this section we examine the relationship between happiness and trust. Johnson [-@johnson2012much] finds that "trust as measured by the World Values Survey is positively correlated with experimentally measured trust". 
+In this section we examine the relationship between happiness and trust. Johnson [-@johnson2012much] finds that "trust as measured by the World Values Survey is positively correlated with experimentally measured trust".
 
-Out of the total `r total` people, only slightly more than `r percent_trust` percent say they can trust most of the people around them, while `r percent_caution` is caucious about the society. Interstingly, there are more people feel happy in life in the latter group than those in the former. Fingure below indicates such difference. 
+Out of the total `r total` people, only slightly more than `r percent_trust` percent say they can trust most of the people around them, while `r percent_caution` are caucious about the society. Interstingly, there are more people feel happy in life in the latter group than those in the former. Figure 1, below, indicates such difference.
+
 ```{r}
 fig_trust
 ```
 
-
 ### Happiness and health status
 
-@gandelman2013happiness finds strong relationship between self-rated health status and perceived life quality. In this project, we find similar pattern in the positive correlation between health status and perceived level of happiness. Fingure below clearly indicates that most of people who rated their health status as "good" also felt happy. 
+Our data suggest a positive correlation between health status and perceived level of happiness. Figure 2, below, clearly indicates that most of people who rated their health status as "good" also felt happy. 
 ```{r}
 fig_health
 ```
 
-# Results
+### Happiness and family savings
+
+Of the `r total` survey participants, the majority (`r percent_just_get_by`) reported just getting by financially, while `r percent_save_money` saved money. The remainder spent either some (`r percent_spent_some_savings`) or all (`r percent_spent_savings`) of their savings.
+
+Table 1 shows happiness levels by level of family savings. Relationships between happiness levels and family savings are explored in Figure 3. Here, we see that of those reporting the lowest levels of happiness (Not at all happy, Not very happy), most had spent all of their family savings. On the other hand, of those reporting the highest level of happiness (Very happy), the highest percentage were those in the strongest financial position - those who saved money.
+
+```{r happiness by family APA table, results= 'asis'}
+
+apa_table(happiness_by_family_savings)
+```
+
+```{r happiness by family savings tables and figures}
+
+figure_savings_3
+```
 
 # Discussion
 
-### Health, trust, and happiness
+Our results illuminate a number of connections between happiness levels and other life factors such as trust of others, family financial status, and health.
 
-The data confirms that people with self-rated better state of health feel happier in general. However, on the contrary to the conventional belief that people who feel they can trust people around them should feel more secured, hence happier. The data shows us somewhat the opposite. Those who say they should be careful with the fellows surrounding them indicates higher level of happiness. 
+Data for happiness levels overall were normally distributed, with the majority of participants reporting a moderate level of happiness, and fewer reporting very low or very high levels of happiness. This pattern continued to be evident when data were grouped by our independent variables.
+
+Contrary to the conventional belief that people who feel they can trust people around them should feel more secured, hence happier. The data shows us somewhat the opposite. Those who say they should be careful with the fellows surrounding them indicates higher level of happiness.
+
+Results indicate that good health is associated with greater feelings of happiness. This affirms prior research by @gandelman2013happiness which found a strong relationship between self-rated health status and perceived life quality.
+
+Results also suggest a positive relationship between family financial circumstances and happiness. Prior research has demonstrated a positive association between income and well-being, although the mechanisms for this remain unclear [@diener2010]. Our results build on this work by indicating that degree to which families are able to save money, or the degree to which they must deplete savings and/or take out loans, are areas worthy of further study. 
+
+Our results should be interpreted with caution. Because we are beginners in using R, data analyses are, so far, only descriptive. Linear models are needed to explore whether the relationships suggested here are statistically significant. Furthermore, even if they were, these data are cross-sectional, so findings cannot be interpreted as indicating causality.  
+
+
+
 
 
 \newpage
@@ -409,30 +425,3 @@ r_refs(file = "r-references.bib")
 
 <div id = "refs"></div>
 \endgroup
-
-Final Paper
-
-The final project must:
-
-(a) be a reproducible and dynamic APA manuscript produced with R Markdown, via
-the {papaja} package and include references to the extant literature; 
-(b) be housed on GitHub, with contributions from all authors obvious;
-(c) demonstrate moving data from its raw “messy” format to a tidy data format
-through the R Markdown file, but not in the final document;
-(d) include at least two exploratory data visualizations, and
-(e) include at least summary statistics of the data in tables, although fitted
-models of any sort are an added bonus (not literally, there are not extra points
-for fitting a model).
-
-## The points for the final project are broken down as follows: 
-### Writing (abstract, intro, methods, results, discussion, references)
-
-* 30 points(25%) Document is fully reproducible and housed on GitHub 
-* 25 points (21%) Demonstrate use of inline code 
-* 5 points (4%) Demonstrate tidying messy data 
-* 30 points (25%) Two data visualizations 
-* 20 points(10 points each) (17%) Production of at least one table (of summary
-  statistics or model results)
-* 10 points (8%)
-
-
