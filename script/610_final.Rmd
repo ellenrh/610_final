@@ -62,6 +62,7 @@ library(janitor)
 library(dplyr)
 library(kableExtra)
 library(knitr)
+library(ggplot2)
 
 ```
 
@@ -224,27 +225,26 @@ figure_savings_1 <- happiness_by_family_savings %>%
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-figure_savings_2 <- happiness_by_family_savings %>%
-  group_by(family_savings) %>%
-ggplot(aes(feeling_of_happiness, percent)) +
-  geom_col(fill = "dark blue") +
-  facet_wrap(~family_savings) +
-  labs(title = "Figure 2", 
+figure_savings_3 <- happiness_by_family_savings %>%
+ggplot(aes(fill = family_savings, feeling_of_happiness, percent)) +
+  geom_bar(position = "dodge", stat = "identity") +
+  labs(title = "Figure 3", 
        subtitle = "Happiness levels by family savings: percentage",
        x = "Feeling of happiness",
        y = "Percent") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
+
 savings_table_2 <- happiness_by_family_savings %>%
   as_tibble() %>%
   arrange(percent)
 
-figure_savings_3 <- happiness_by_family_savings %>%
+figure_savings_4 <- happiness_by_family_savings %>%
   ggplot(aes(feeling_of_happiness, percent, colour = family_savings)) +
   geom_point() +
   geom_smooth(se = FALSE, method = lm) +
-  labs(Title = "Figure 3",
+  labs(Title = "Figure 4",
        subtitle = "Happiness by family savings: percentage", 
        x = "Feeling of Happiness",
        y = "Percent") +
